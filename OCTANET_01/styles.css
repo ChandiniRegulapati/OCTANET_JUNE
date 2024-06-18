@@ -1,0 +1,380 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+   background: linear-gradient(red, orange);
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Adjusted to space-between */
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 100px; /* Adjusted logo size for better alignment */
+    width: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2ssem;
+    transition: color 0.3s ease-in-out;
+}
+
+header h1:hover ,
+    header h1:active {
+    color: #000000; /* Updated hover color */
+    text-decoration: underline;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* Hero Section Styles */
+#hero {
+    background: url('https://res.cloudinary.com/dnmnqrcw3/image/upload/v1718706856/cdb970fc-363e-4d7c-8dfc-cf45c08351e4.png') no-repeat center center/cover;
+    color: #fff;
+    padding: 160px ;
+    text-align: center;
+    margin-top: 60px; /* To offset fixed header */
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    transition: color 0.3s ease-in-out;
+}
+
+#hero h2:hover {
+    color: #FFD700; /* Updated hover color */
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+#hero .btn {
+    background: #FFD700; /* Updated button background color */
+    color: #333;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#hero .btn:hover {
+    background: #fc9f00; /* Updated hover color */
+    transform: translateY(-5px);
+}
+
+/* Recipes Section Styles */
+#recipes {
+    background-color: #dbd0d0;
+    padding: 90px 0;
+}
+
+#recipes h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #ff5722;
+    transition: color 0.3s ease-in-out;
+}
+
+#recipes h2:hover {
+    color: #e64a19;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.recipe-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.recipe-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-item h3 {
+    margin: 15px 0;
+    font-size: 1.8em;
+    color: #ff5722;
+}
+
+.recipe-item p {
+    padding: 0 20px;
+    font-size: 1em;
+    color: #000000;
+}
+
+.recipe-item .btn {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.recipe-item .btn:hover {
+    background: #560202;
+    transform: translateY(-5px);
+}
+
+/* About Section Styles */
+#about {
+    background: url('https://res.cloudinary.com/dnmnqrcw3/image/upload/v1718707422/aeb84cca-968d-4bf8-9680-0e6bfcd6c874.png') no-repeat center center/cover;
+    background-size: cover;
+    padding: 70px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#about .about-content {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.578);
+    border-radius: 10px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffd54f;
+    transition: color 0.3s ease-in-out;
+}
+
+#about h2:hover {
+    color: #e64a19;
+}
+
+#about p,
+#about h3 {
+    font-size: 1.3em;
+    color: #ffffff;
+}
+
+#about h3 {
+    margin-top: 20px;
+    color: #ffd54f;
+}
+
+.about-content ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.about-content li {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Contact Section Styles */
+#contact {
+    background: url('https://res.cloudinary.com/dnmnqrcw3/image/upload/v1718707535/recipe-book-on-wooden-table-background-banner-free-vector_zeioob.jpg');
+    padding: 70px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #ff5722;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact h2:hover {
+    color: #e64a19;
+}
+
+#contact p {
+    font-size: 1.3em;
+    color: #000000;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #ff5722;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+#contact form button {
+    background: #d23505;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#contact form button:hover {
+    background: #b60909;
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+footer {
+    background: #c02105;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns content to the left in smaller screens */
+    }
+
+    header .logo img {
+        height: 40px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 10px 0 0 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-item img {
+        height: 150px;
+    }
+
+    #about {
+        padding: 50px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about .about-content {
+        margin-right: 0;
+        text-align: center;
+    }
+}
