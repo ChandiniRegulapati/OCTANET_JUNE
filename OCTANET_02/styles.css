@@ -1,0 +1,236 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://res.cloudinary.com/dnmnqrcw3/image/upload/v1719248066/trekking-with-tent-in-forest-concept-in-flat-cartoon-design-night-scene-in-woods-starry-sky-campground-and-fireplace-mountains-on-horizon-summer-hiking-outdoors-illustration-background-vector_oiau8o.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.task-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 400px;
+    transition: max-height 0.3s ease;
+}
+
+.task-container:hover {
+    max-height: 500px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    background-color: #555;
+    border-color: #bbb;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button i {
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #444;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+li:hover {
+    transform: translateX(10px);
+    background-color: #555;
+}
+
+li.selected {
+    background-color: #5d9cf2;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: #28a745;
+}
+
+li span {
+    flex: 1;
+    margin-left: 10px;
+}
+
+li button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+li button:hover {
+    transform: scale(1.1);
+}
+
+li button i {
+    font-size: 16px;
+    color: #fff;
+}
+
+li button.edit i {
+    color: #ffc107;
+}
+
+li button.edit:hover i {
+    color: #e0a800;
+}
+
+li button.delete i {
+    color: #dc3545;
+}
+
+li button.delete:hover i {
+    color: #c82333;
+}
+
+li button.complete i {
+    color: #28a745;
+}
+
+li button.complete:hover i {
+    color: #218838;
+}
+
+#remove-completed {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#remove-completed:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+    .container, .task-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        margin-right: 5px;
+    }
+
+    button {
+        padding: 8px;
+    }
+
+    li {
+        padding: 8px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease;
+}
